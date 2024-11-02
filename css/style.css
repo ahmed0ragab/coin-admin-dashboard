@@ -1,0 +1,230 @@
+body {
+       background-color: aquamarine;
+       height: 100vh;
+       display: grid;
+       grid-template-columns: 80px 1fr;
+       grid-template-rows: 50px 1fr;
+       grid-template-areas: 
+       "side header"
+       "side main";
+}
+
+* {
+       padding: 0;
+       margin: 0;
+}
+/* ============================================================================= */
+                            /* START CSS FOR HEADER   */
+/* ============================================================================= */
+.header {
+       grid-area: header;
+       display: grid;
+       grid-template-columns: 1fr 1fr; 
+       grid-template-rows: 1fr;
+       grid-template-areas: 
+       "left right";
+       background-color: rgb(234, 222, 222);
+}
+.header > div , .header > * {
+       display: flex;
+}
+.right-header  {
+       padding-right: 10px;
+       float: right;
+       grid-area: right;
+       align-items: center;
+       justify-content: space-between;
+}
+.right-header .user-data > p {
+      display: block !important ; 
+}
+.right-header .user-data :nth-child(1) {
+       font-size: 20px;
+       font-weight: 600;
+}
+.left-header  {
+       display: flex;
+       grid-area: left;
+       float: left;
+       align-items: center;
+       gap: 30px;   
+}
+
+.left-header input {
+       height: 30px;
+       width: 400px;
+       /* cursor: pointer; */
+}
+.left-header span {
+       cursor: pointer;
+}
+
+/* ============================================================================= */
+                            /* START SIDEBAR (ASIDE)  */
+/* ============================================================================= */
+
+.sidebar {
+           grid-area: side;
+           background-color: rgb(7, 15, 39);
+           overflow-y: scroll;
+           scrollbar-width: none;
+           transition: transform 10s ease;
+}
+.collapsed {
+       display: none; /* Hide the sidebar */
+   }
+.sidebar-collapsed {
+       grid-template-columns: 0 1fr; /* Adjust grid when sidebar is hidden */
+   }
+.sidebar .logo {
+       width: 100%;
+       text-align: center;
+       padding-top: 20px;
+}
+.menu-item {
+       width: 100%;
+       color: white;
+}
+.menu-item > span {
+       display: block;
+       padding-top: 20px;
+       text-align: center;
+       padding-bottom: 20px;
+       color: rgb(152, 142, 142);
+}
+.menu-item > p {
+       display: block;
+       border-bottom: 2px solid rgb(54, 50, 50);
+       text-align: center;
+       padding-bottom: 20px;
+}
+/* ============================================================================= */
+                        /* START MAIN (.main-content)  */
+/* ============================================================================= */      
+       
+.main-content {
+       grid-area: main;
+       overflow-y: auto;
+       background-color: chocolate;
+}
+
+.main-title  {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: 1fr;
+       grid-template-areas: 
+       "left right ";
+       justify-content: space-between;
+       margin-bottom: 20px;
+       margin-top: 20px;
+}
+.main-title-left  {
+       padding-left: 10px;
+       display: flex;
+       grid-area: left ;
+       justify-content: start;
+       align-items: center;
+}
+.main-title .main-title-left > h3 {
+       word-spacing: 6px;
+}
+
+.main-title-right  {
+       display: flex;
+       grid-area: right;
+       justify-content: end;
+       gap: 10px;
+       align-items: center;
+       padding-right: 10px;
+}
+
+.main-cards {
+       display: grid ;
+       grid-template-columns: repeat(3 , 1fr);
+       grid-template-rows:  repeat(6 , 1fr );
+       grid-template-areas: 
+       "a1 a2 a3"
+       "b1 b2 b4"
+       "b1 b3 b4"
+       "c1 c2 c3"
+       "d1 d2 d3"
+       "e1 e1 f3";
+       row-gap: 20px;
+       column-gap: 20px;
+       padding: 0 15px;
+       
+}
+.card {
+       background-color: gray;
+}
+.card:nth-child(1){
+       grid-area: a1;
+       border-radius: 10px;
+   }
+   .card:nth-child(2){
+       grid-area: a2;
+       border-radius: 10px;
+   }
+   .card:nth-child(3){
+       grid-area: a3;
+       border-radius: 10px;
+   }
+   .card:nth-child(4){
+       grid-area: b1;
+       border-radius: 10px;
+   }
+   .card:nth-child(5){
+       grid-area: b2;
+       border-radius: 10px;
+   }
+   .card:nth-child(6){
+       grid-area: b3;
+       border-radius: 10px;
+   }
+   
+   .card:nth-child(7){
+       grid-area: b4;
+       border-radius: 10px;
+   }
+   
+   .card:nth-child(8){
+       grid-area: c1;
+       border-radius: 10px;
+   }
+   
+   .card:nth-child(9){
+       grid-area: c2;
+       border-radius: 10px;
+   }
+   
+   .card:nth-child(10){
+       grid-area: c3;
+       border-radius: 10px;
+   }
+   
+   .card:nth-child(11){
+       grid-area: d1;
+       border-radius: 10px;
+   }
+   
+   .card:nth-child(12){
+       grid-area: d2;
+       border-radius: 10px;
+   }
+   
+   .card:nth-child(13){
+       grid-area: d3;
+       border-radius: 10px;
+   }
+   
+   .card:nth-child(14){
+       grid-area: e1 ;
+       border-radius: 10px;
+   }
+   
+   .card:nth-child(15){
+       grid-area: f3;
+       border-radius: 10px;
+   }
+   
+   

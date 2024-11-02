@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>COIN</title>
+       <link rel="icon" href="img/logo.png">
+       <link rel="stylesheet" href="css/style.css">
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+       <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+</head>
+<body>
+<!-- ============================================================================= -->
+                            <!-- START NAV BAR (HEADER) -->
+<!-- ============================================================================= -->
+       <header class="header">
+              <div class="left-header">
+                     <div> <span id="toggleButton" class="material-symbols-outlined" >dashboard</span></div>
+                     <div class="input"> <form  role="search"> <input  type="search" placeholder="Type to Search.." aria-label="Search"></form></div>
+              </div>
+
+              <div class="right-header">
+                     <span class="material-symbols-outlined"> notifications</span>
+                     <span class="material-symbols-outlined"> grade</span>
+                     <span class="material-symbols-outlined"> mail</span>
+                     <span class="material-symbols-outlined"> shopping_cart</span>
+                     <img width="40" height="20" src="https://react.pixelstrap.net/cion/static/media/us.bbbd9f5266841b5c49cc.svg" alt="">
+                     <h4>EN</h4>
+                     <img src="data:image/png;base64,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" alt="">
+                     <div class="user-data">
+                            <p style="display: inline;">hellen walter</p>
+                            <p style="display: inline;">admin</p>
+                     </div>
+                     
+              </div>
+       </header>
+<!-- ============================================================================= -->
+                              <!-- START SIDEBAR (ASIDE) -->
+<!-- ============================================================================= -->
+       <aside class="sidebar" id="sidebar">
+              <div class="side-title">
+                     <div class="logo"> <img src="img/logo.png"> </div>
+              </div>
+              <ul class="sidemenu">
+                     <li class="menu-item"> <span class="material-symbols-outlined" >dashboard</span><p>general</p> </li>
+                     <li class="menu-item"> <span class="material-symbols-outlined" >data_usage</span><p>ui kits</p> </li>
+                     <li class="menu-item"> <span class="material-symbols-outlined" >docs</span> <p>perk ui</p>  </li>
+                     <li class="menu-item"> <span class="material-symbols-outlined" >folder</span> <p>form</p> </li>
+                     <li class="menu-item"> <span class="material-symbols-outlined" >settings</span> <p>chart</p> </li>
+                     <li class="menu-item"> <span class="material-symbols-outlined" >task</span> <p>apps</p> </li>
+                     <li class="menu-item"> <span class="material-symbols-outlined" >grid_view</span> <p>pages</p> </li>
+              </ul>
+       </aside>
+<!-- ============================================================================= -->
+                            <!-- START MAIN CONTENT -->
+<!-- ============================================================================= -->
+       <main class="main-content">
+              <div class="main-title">
+                     <div class="main-title-left">
+                            <h3 class="font-weight-bold">shopping place Dashboard</h3>
+                     </div>
+                     <div class="main-title-right">
+                            <span class="material-symbols-outlined" >home</span>
+                            <p>Dashboard</p>
+                            <p>Defualt</p>
+                     </div>
+              </div>
+               <div class="main-cards">
+                     <div class="card">
+                        <h1>hello world</h1>
+                        <h1>hello world</h1>
+                        <h1>hello world</h1>
+                        <h1>hello world</h1>
+                        <h1>hello world</h1>
+                     </div>
+                     <div class="card">
+                          
+                     </div>
+                     <div class="card">
+                         
+                     </div>
+                     <div class="card">
+
+                     </div>
+                     <div class="card">
+                           
+                     </div>
+                     <div class="card">
+                          
+                     </div>
+                     <div class="card">
+                           
+                     </div>
+                     <div class="card">
+                           
+                     </div>
+                     <div class="card">
+                           
+                     </div>
+                     <div class="card">
+                           
+                     </div>
+                     <div class="card">
+                           
+                     </div>
+                     <div class="card">
+                           
+                     </div>
+                     <div class="card">
+                           
+                     </div>
+                     <div class="card">
+                           
+                     </div>
+                     <div class="card">
+                           
+                     </div>
+               </div>
+       </main>
+
+<!-- ============================================================================= -->
+                            <!-- START FOOTER -->
+<!-- ============================================================================= -->
+       
+       <footer class="footer"></footer>
+       <script src="js/main.js"></scriptscr>
+</body>
+
+</html>
